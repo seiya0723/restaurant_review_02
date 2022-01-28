@@ -1,0 +1,23 @@
+{% extends "restaurant/base.html" %}
+{# テンプレートの継承を行う #}
+
+
+
+{% block main %}
+
+{% for restaurant in restaurants %}
+<div class="border">
+    <div>{{ restaurant.name }}</div>
+
+    <a class="btn btn-outline-primary" href="{% url 'restaurant:single' restaurant.id %}">この飲食店にレビューする</a>
+
+</div>
+{% endfor %}
+
+
+
+
+
+
+{% endblock %}
+
